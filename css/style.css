@@ -7526,3 +7526,166 @@ h2.editorial-heading em,
     transition: none !important;
   }
 }
+
+/* UPFOREX logo inside animated globe */
+
+.planet-center.planet-center-logo {
+  width: 180px;
+  height: 94px;
+  padding: 17px;
+  border-radius: 999px;
+  background: #0d0d0d;
+  border: 1px solid rgba(180,255,150,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.planet-center-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  .planet-center.planet-center-logo {
+    width: 142px;
+    height: 76px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 385px) {
+  .planet-center.planet-center-logo {
+    width: 125px;
+    height: 66px;
+    padding: 10px;
+  }
+}
+
+/* UPFOREX - Revolving Globe Cards */
+
+#orbitalStage .uf-satellite-track {
+  --orbit-time: 21s;
+  --orbit-delay: 0s;
+
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  top: 50%;
+
+  width: min(78%, 540px);
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+
+  animation: uf-satellite-rotate
+    var(--orbit-time) linear infinite;
+
+  animation-delay: var(--orbit-delay);
+}
+
+/* Three starting positions */
+
+#orbitalStage .uf-satellite-track--fx {
+  --orbit-delay: -11s;
+}
+
+#orbitalStage .uf-satellite-track--mt5 {
+  --orbit-delay: -19s;
+}
+
+#orbitalStage .uf-satellite-track--cfd {
+  --orbit-delay: -4s;
+}
+
+/* Keep all cards readable */
+
+#orbitalStage .uf-satellite-track > .satellite {
+  position: absolute;
+
+  left: 100% !important;
+  top: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+
+  animation: uf-satellite-counter
+    var(--orbit-time) linear infinite !important;
+
+  animation-delay: var(--orbit-delay) !important;
+}
+
+/* Rotate cards around globe */
+
+@keyframes uf-satellite-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Counter rotation keeps text straight */
+
+@keyframes uf-satellite-counter {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+/* Mobile layout */
+
+@media (max-width: 740px) {
+  #orbitalStage .uf-satellite-track {
+    width: 71%;
+  }
+
+  #orbitalStage .uf-satellite-track > .satellite {
+    padding: 8px 10px;
+    font-size: 9px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  #orbitalStage .uf-satellite-track,
+  #orbitalStage .uf-satellite-track > .satellite {
+    animation: none !important;
+  }
+
+  #orbitalStage .uf-satellite-track--fx {
+    transform: translate(-50%, -50%) rotate(210deg);
+  }
+
+  #orbitalStage .uf-satellite-track--mt5 {
+    transform: translate(-50%, -50%) rotate(340deg);
+  }
+
+  #orbitalStage .uf-satellite-track--cfd {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  #orbitalStage .uf-satellite-track--fx > .satellite {
+    transform: translate(-50%, -50%) rotate(-210deg);
+  }
+
+  #orbitalStage .uf-satellite-track--mt5 > .satellite {
+    transform: translate(-50%, -50%) rotate(-340deg);
+  }
+
+  #orbitalStage .uf-satellite-track--cfd > .satellite {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
