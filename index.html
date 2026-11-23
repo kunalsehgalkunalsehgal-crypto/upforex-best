@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0D0D0D">
+  <meta name="color-scheme" content="dark">
+  <meta name="description"
+    content="Meet UPFOREX. Discover six market categories, MetaTrader 5, trading tools and account options. A fresh perspective on global markets.">
+  <title>UPFOREX | A Different Perspective on Markets</title>
+  <link rel="preload" as="font" type="font/woff2" href="assets/montserrat.woff2" crossorigin>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="opening-wipe" aria-hidden="true"><span></span><span></span></div>
+  <div class="pointer-aura" id="pointerAura" aria-hidden="true"></div>
+
+  <div class="news-bar">
+    <div class="wrap news-bar-inner"><span><i class="pulse-dot"></i> A new perspective on global markets</span><span
+        class="news-side">MULTI-ASSET CFD TRADING <b>✳</b> METATRADER 5</span></div>
+  </div>
+  <header class="header" id="header">
+    <div class="wrap header-inner">
+      <a href="#top" class="logo" aria-label="UPFOREX, back to top"><img src="assets/upforex-logo.webp" alt="UPFOREX"
+          width="192" height="32"></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#markets">Markets</a>
+        <a href="#experience">Why UPFOREX</a>
+        <a href="#platform">Platform</a>
+        <a href="#accounts">Accounts</a>
+        <a href="#insights">Resources</a>
+      </nav>
+      <div class="desktop-actions"><a class="login" href="https://client.upforex.live" target="_blank"
+          rel="noopener noreferrer">Log in <span>↗</span></a><a class="nav-cta magnetic"
+          href="https://client.upforex.live/?tab=register" target="_blank" rel="noopener noreferrer">Get started
+          <span>↗</span></a></div>
+      <button class="menu-toggle" id="menuToggle" aria-controls="mobileMenu" aria-expanded="false"
+        aria-label="Open navigation" type="button"><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobileMenu" aria-label="Mobile navigation" inert>
+      <a href="#markets">Markets <span>01</span></a><a href="#experience">Why UPFOREX <span>02</span></a><a
+        href="#platform">Platform <span>03</span></a><a href="#accounts">Accounts <span>04</span></a><a
+        href="#insights">Resources <span>05</span></a><a href="#faq">FAQs <span>06</span></a><a
+        href="https://client.upforex.live" target="_blank" rel="noopener noreferrer">Client login <span>↗</span></a><a
+        class="mobile-open" href="https://client.upforex.live/?tab=register" target="_blank"
+        rel="noopener noreferrer">Open account ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-layout">
+        <div class="hero-text">
+          <p class="eyebrow intro-animate"><span class="eyebrow-sq"></span> WELCOME TO A NEW PERSPECTIVE <span
+              class="eyebrow-counter">[01 — 09]</span></p>
+          <h1 class="hero-heading intro-animate">THINK<br><span class="outline-word">BIGGER.</span><br><span
+              class="green-underline">TRADE</span><span class="hero-asterisk" aria-hidden="true">✳</span><br>SMARTER.
+          </h1>
+          <p class="hero-lead intro-animate">Global markets don't stand still. See the bigger picture with six market
+            categories and MetaTrader 5.</p>
+          <div class="hero-actions intro-animate"><a class="round-arrow magnetic"
+              href="https://client.upforex.live/?tab=register" target="_blank" rel="noopener noreferrer"
+              aria-label="Open a trading account">↗</a><a class="action-label"
+              href="https://client.upforex.live/?tab=register" target="_blank" rel="noopener noreferrer">EXPLORE YOUR
+              NEXT MOVE <small>Open an account</small></a><a class="hero-secondary" href="#markets">Discover the markets
+              <span>↘</span></a></div>
+          <div class="hero-foot intro-animate"><span>INDEPENDENT THINKING. GLOBAL PERSPECTIVE.</span><span>SCROLL TO
+              EXPLORE <b>↓</b></span></div>
+        </div>
+        <div class="hero-art" id="heroArt">
+          <div class="v3-hero-rays" aria-hidden="true"><i></i><i></i><i></i></div>
+          <canvas id="heroParticles" class="hero-particles" aria-hidden="true"></canvas>
+          <div class="hero-scanner" aria-hidden="true"></div>
+          <div class="art-number" aria-hidden="true">UP—01</div>
+          <div class="orbital-stage" id="orbitalStage" role="img"
+            aria-label="Abstract animated globe representing worldwide markets, not market data">
+            <div class="orbit orbit-a"></div>
+            <div class="orbit orbit-b"></div>
+            <div class="orbit orbit-c"></div>
+            <div class="planet">
+              <div class="planet-shadow"></div>
+              <div class="planet-longitudes"><i></i><i></i><i></i></div>
+              <div class="planet-latitudes"></div>
+              <div class="planet-center">UP<span>↗</span></div>
+            </div>
+            <span class="satellite satellite-one"><i></i> FX</span><span class="satellite satellite-two"><i></i>
+              MT5</span><span class="satellite satellite-three"><i></i> CFD</span>
+            <div class="planet-label label-a">GLOBAL MARKETS <span>↗</span></div>
+            <div class="planet-label label-b">CONNECTED THINKING / 2026</div>
+          </div>
+          <div class="art-corner-top"><span>01 / YOUR POINT OF VIEW</span><span class="art-sun"
+              aria-hidden="true">✳</span></div>
+          <div class="art-bottom"><span>NO STATIC THINKING.</span><span class="sound-wave"
+              aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+        </div>
+      </div>
+      <div class="hero-vertical" aria-hidden="true">THE WORLD IS ALWAYS MOVING ↗</div>
+    </section>
+
+    <div class="moving-band" aria-hidden="true">
+      <div class="band-track"><span>DIFFERENT PERSPECTIVE <i>✳</i> SAME WORLD <i>✳</i> BIGGER THINKING <i>✳</i> SIX
+          MARKETS <i>✳</i> </span><span>DIFFERENT PERSPECTIVE <i>✳</i> SAME WORLD <i>✳</i> BIGGER THINKING <i>✳</i> SIX
+          MARKETS <i>✳</i> </span></div>
+    </div>
+
+    <section class="intro section-pad" id="experience">
+      <div class="wrap">
+        <div class="kicker reveal"><span>01</span> / A DIFFERENT MINDSET <span class="kicker-right">OUR APPROACH
+            ↗</span></div>
+        <div class="intro-visual-layout">
+          <div class="intro-story">
+            <div class="intro-story-index reveal">GLOBAL PERSPECTIVE <span>✳</span> ONE CONNECTED EXPERIENCE</div>
+            <h2 class="editorial-heading reveal">THE WORLD<br>IS BIGGER<br>THAN <em>ONE</em><br>MARKET<span
+                class="mini-star">✳</span></h2>
+            <p class="intro-story-copy reveal">Explore the markets you follow, the platform you need and the freedom to
+              trade across devices.</p>
+            <a class="line-link reveal" href="https://www.upforex.com/about-us">Get to know UPFOREX <span>↗</span></a>
+            <div class="intro-pillar-row reveal" aria-label="Explore six markets with one platform">
+              <span><b>06</b> MARKET CATEGORIES</span>
+              <span><b>01</b> MT5 PLATFORM</span>
+            </div>
+          </div>
+          <div class="intro-visual-composition reveal" data-visual-scene>
+            <div class="intro-city-frame">
+              <img src="assets/connectivity-poster.webp"
+                alt="Illuminated global financial district with a connected skyline" loading="lazy" width="1280"
+                height="720">
+              <div class="intro-city-shade"></div>
+              <span class="intro-image-top">UPFOREX / A DIFFERENT VIEW <b>↗</b></span>
+              <div class="intro-city-line" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+              <span class="intro-image-bottom">SEE BEYOND ONE MARKET <b>✳</b></span>
+            </div>
+            <div class="intro-floating-market" aria-hidden="true">
+              <img src="assets/stocks.webp" alt="" loading="lazy" width="900" height="600">
+              <div><small>DISCOVER MORE</small><strong>GLOBAL<br>MARKETS <span>↗</span></strong></div>
+            </div>
+            <span class="intro-visual-orbit" aria-hidden="true">✳</span>
+          </div>
+        </div>
+        <div class="intro-caption reveal"><span>MORE MARKETS.</span><span>ONE CONNECTED EXPERIENCE.</span><span>YOUR
+            POINT OF VIEW.</span></div>
+      </div>
+    </section>
+
+    <section class="markets section-pad" id="markets">
+      <div class="wrap">
+        <div class="kicker kicker-dark reveal"><span>02</span> / THE MARKETS <span class="kicker-right">EXPLORE WHAT
+            MOVES THE WORLD</span></div>
+        <div class="markets-top">
+          <h2 class="editorial-heading reveal">CHOOSE<br>YOUR <em>WORLD.</em></h2>
+          <p class="markets-intro reveal">Six market categories. One place to discover them. Tap a market to explore.
+          </p>
+        </div>
+        <div class="markets-interface">
+          <div class="market-options" role="group" aria-label="Select a market category">
+            <button class="market-option active" type="button" data-index="0" aria-pressed="true"><span
+                class="market-num">01</span><span class="market-name">Forex</span><span class="market-desc">Currency
+                CFDs</span><span class="market-chevron">↗</span></button>
+            <button class="market-option" type="button" data-index="1" aria-pressed="false"><span
+                class="market-num">02</span><span class="market-name">Stocks</span><span class="market-desc">Share
+                CFDs</span><span class="market-chevron">↗</span></button>
+            <button class="market-option" type="button" data-index="2" aria-pressed="false"><span
+                class="market-num">03</span><span class="market-name">Metals</span><span class="market-desc">Precious
+                metals</span><span class="market-chevron">↗</span></button>
+            <button class="market-option" type="button" data-index="3" aria-pressed="false"><span
+                class="market-num">04</span><span class="market-name">Indices</span><span class="market-desc">Index
+                CFDs</span><span class="market-chevron">↗</span></button>
+            <button class="market-option" type="button" data-index="4" aria-pressed="false"><span
+                class="market-num">05</span><span class="market-name">Energy</span><span class="market-desc">Energy
+                CFDs</span><span class="market-chevron">↗</span></button>
+            <button class="market-option" type="button" data-index="5" aria-pressed="false"><span
+                class="market-num">06</span><span class="market-name">Crypto</span><span class="market-desc">Crypto
+                CFDs</span><span class="market-chevron">↗</span></button>
+          </div>
+          <div class="market-showcase" id="marketShowcase" data-market="0" aria-live="polite">
+            <div class="showcase-top"><span>MARKET SPOTLIGHT <b>✳</b></span><span id="showcaseIndex">01 / 06</span>
+            </div>
+            <div class="showcase-art" aria-hidden="true">
+              <div class="showcase-ring ring-1"></div>
+              <div class="showcase-ring ring-2"></div>
+              <div class="showcase-ring ring-3"></div>
+              <div class="showcase-mark" id="showcaseMark">FX</div>
+              <div class="showcase-radial"></div>
+            </div>
+            <div class="showcase-text"><span id="showcaseTag">CURRENCIES / GLOBAL EXCHANGE</span>
+              <h3 id="showcaseTitle">Forex CFDs</h3>
+              <p id="showcaseDescription">Explore currency market movements from one trading space.</p><a
+                id="showcaseLink" href="https://www.upforex.com/products/forex-cfds" target="_blank"
+                rel="noopener noreferrer">Explore this market <b>↗</b></a>
+            </div>
+            <span class="showcase-corner">UPFOREX ®</span>
+          </div>
+        </div>
+        <p class="risk-note">CFDs are leveraged products and involve significant risk. Availability and terms depend on
+          your location and account.</p>
+      </div>
+    </section>
+
+    <section class="principles section-pad">
+      <div class="wrap">
+        <div class="kicker reveal"><span>03</span> / IT SHOULD FEEL SIMPLE <span class="kicker-right">LESS CLUTTER. MORE
+            CLARITY.</span></div>
+        <div class="principles-grid">
+          <div class="principles-lead reveal"><span class="asterisk-icon" aria-hidden="true">✳</span>
+            <h2>GOOD TOOLS.<br><em>CLEAR</em> FOCUS.</h2>
+            <p>A more connected place to learn, explore and trade.</p>
+          </div>
+          <div class="principle reveal"><span class="principle-number">/ 01</span>
+            <div class="principle-symbol">◎</div>
+            <h3>Six ways in.</h3>
+            <p>Discover currency, stock, metal, index, energy and crypto CFD markets.</p>
+          </div>
+          <div class="principle reveal"><span class="principle-number">/ 02</span>
+            <div class="principle-symbol">↗</div>
+            <h3>One platform.</h3>
+            <p>Explore charts, tools and trading on MetaTrader 5.</p>
+          </div>
+          <div class="principle reveal"><span class="principle-number">/ 03</span>
+            <div class="principle-symbol">✳</div>
+            <h3>Room to grow.</h3>
+            <p>Find guides, trading tools and support resources when you need them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="platform" id="platform">
+      <!-- <div class="platform-head">
+        <div class="wrap">
+          <div class="kicker kicker-light reveal"><span>04</span> / MEET YOUR PLATFORM <span
+              class="kicker-right">METATRADER 5</span></div>
+          <div class="platform-headline">
+            <h2 class="editorial-heading reveal">THE TOOLS<br>TO GO <em>FURTHER.</em></h2>
+            <div class="platform-side reveal">
+              <div class="platform-photo-preview" data-visual-scene><img src="assets/indices.webp"
+                  alt="Trader studying financial market charts at a computer" loading="lazy" width="610"
+                  height="580"><span class="platform-photo-badge">YOUR TRADING SPACE <b>↗</b></span><span
+                  class="platform-photo-scan" aria-hidden="true"></span></div>
+              <div class="platform-side-copy"><img src="assets/mt5-logo.webp" alt="MetaTrader 5 icon" width="44"
+                  height="44">
+                <p>Trade, analyse and manage your positions with MetaTrader 5 on desktop and mobile.</p><a
+                  class="pill-link" href="https://www.upforex.com/platforms/mt5">Explore MT5 <span>↗</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+<!-- Replace only the existing platform-head block -->
+<div class="platform-head mt5-redesign">
+  <div class="wrap mt5-redesign__wrap">
+
+    <div class="kicker kicker-light reveal">
+      <span>04</span> / MEET YOUR PLATFORM
+      <span class="kicker-right">METATRADER 5</span>
+    </div>
+
+    <div class="mt5-redesign__main">
+
+      <div class="mt5-redesign__copy">
+
+        <h2 class="mt5-redesign__heading reveal">
+          THE TOOLS<br>
+          TO GO <em>FURTHER.</em>
+        </h2>
+
+        <p class="mt5-redesign__description reveal">
+          Trade, analyse and manage your positions with MetaTrader 5 —
+          a powerful, professional trading platform.
+        </p>
+
+        <ul class="mt5-redesign__features reveal"
+            aria-label="Platform highlights">
+
+          <li>
+            <span class="mt5-redesign__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.9"
+                   stroke-linecap="round"
+                   stroke-linejoin="round">
+                <path d="M5 4v16m7-17v18m7-17v16"/>
+                <rect x="3" y="8" width="4" height="7" rx=".5"/>
+                <rect x="10" y="5" width="4" height="10" rx=".5"/>
+                <rect x="17" y="9" width="4" height="7" rx=".5"/>
+              </svg>
+            </span>
+            <strong>ADVANCED CHARTS</strong>
+          </li>
+
+          <li>
+            <span class="mt5-redesign__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.9"
+                   stroke-linecap="round"
+                   stroke-linejoin="round">
+                <rect x="2" y="4" width="15" height="11" rx="1.5"/>
+                <path d="M7 20h5m-2-5v5"/>
+                <rect x="16" y="9" width="6" height="12" rx="1"/>
+              </svg>
+            </span>
+            <strong>MULTIPLE DEVICES</strong>
+          </li>
+
+          <li>
+            <span class="mt5-redesign__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"
+                   fill="none"
+                   stroke="currentColor"
+                   stroke-width="1.9"
+                   stroke-linecap="round"
+                   stroke-linejoin="round">
+                <path d="M3 5h18M3 12h18M3 19h18"/>
+                <circle cx="9" cy="5" r="2.4" fill="#3cff19"/>
+                <circle cx="16" cy="12" r="2.4" fill="#3cff19"/>
+                <circle cx="8" cy="19" r="2.4" fill="#3cff19"/>
+              </svg>
+            </span>
+            <strong>TRADING TOOLS</strong>
+          </li>
+
+        </ul>
+
+        <a class="mt5-redesign__button reveal"
+           href="https://www.upforex.com/platforms/mt5">
+          EXPLORE MT5
+          <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+      <div class="mt5-redesign__visual reveal"
+           aria-label="Illustration of MetaTrader 5 on desktop and mobile">
+
+        <div class="mt5-redesign__globe"
+             aria-hidden="true"></div>
+
+        <img
+          class="mt5-redesign__devices"
+          src="assets/mt5-laptop-phone.png"
+          alt="MT5 trading terminal on laptop and smartphone, illustrative prices only"
+          loading="lazy"
+          width="1060"
+          height="529"
+        >
+
+      </div>
+
+    </div>
+
+    <div class="mt5-redesign__platforms reveal"
+         aria-label="Available on desktop, web and mobile">
+      DESKTOP <span>·</span>
+      WEB <span>·</span>
+      MOBILE
+    </div>
+
+  </div>
+</div>
+
+      <div class="platform-stage">
+        <div class="wrap platform-stage-inner">
+          <div class="platform-giant" aria-hidden="true">MT5</div>
+          <div class="platform-halo" aria-hidden="true"></div><img class="platform-devices reveal"
+            src="assets/mt5-devices.webp" alt="Illustration of trading platform interfaces on devices" loading="eager">
+          <div class="platform-sticker">BUILT FOR <br>YOUR NEXT<br>MOVE <span>↗</span></div>
+          <div class="platform-stage-bottom"><span>CHARTS • ANALYSIS • MULTI-DEVICE</span>
+            <div><a href="https://download.mql5.com/cdn/web/up.global.markets/mt5/upglobalmarkets5setup.exe"
+                target="_blank" rel="noopener noreferrer">Windows ↗</a><a
+                href="https://download.mql5.com/cdn/mobile/mt5/ios?server=UpGlobalMarkets-Trade" target="_blank"
+                rel="noopener noreferrer">iOS ↗</a><a
+                href="https://download.mql5.com/cdn/mobile/mt5/android?server=UpGlobalMarkets-Trade" target="_blank"
+                rel="noopener noreferrer">Android ↗</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="accounts section-pad" id="accounts">
+      <div class="wrap">
+        <div class="kicker reveal"><span>05</span> / A CHOICE THAT FITS <span class="kicker-right">EXPLORE YOUR
+            OPTIONS</span></div>
+        <div class="accounts-head">
+          <h2 class="editorial-heading reveal">DIFFERENT<br>WAYS TO <em>START.</em></h2>
+          <p class="reveal">Everyone trades differently. Explore the account options and check the current conditions
+            before you choose.</p>
+        </div>
+        <div class="account-list"><a class="account-row reveal" href="https://www.upforex.com/accounts"><span
+              class="account-number">01 / ACCOUNT</span><strong>Standard</strong><span
+              class="account-description">Explore the fundamentals.</span><span class="account-arrow">↗</span></a><a
+            class="account-row account-row-dark reveal" href="https://www.upforex.com/accounts"><span
+              class="account-number">02 / ACCOUNT</span><strong>Pro-ECN</strong><span
+              class="account-description">Discover another account approach.</span><span
+              class="account-arrow">↗</span></a><a class="account-row reveal"
+            href="https://www.upforex.com/accounts"><span class="account-number">03 /
+              ACCOUNT</span><strong>Elite-ECN</strong><span class="account-description">Find a fit for your trading
+              needs.</span><span class="account-arrow">↗</span></a></div>
+        <p class="risk-note dark-risk">Account costs, eligibility and trading terms vary. See official account details
+          before applying.</p>
+      </div>
+    </section>
+
+    <section class="steps section-pad" id="start">
+      <div class="wrap">
+        <div class="kicker kicker-dark reveal"><span>06</span> / FIND YOUR WAY IN <span class="kicker-right">HOW TO GET
+            STARTED</span></div>
+        <div class="steps-head">
+          <h2 class="editorial-heading reveal">YOUR FIRST<br><em>THREE</em> MOVES.</h2><a class="small-outline reveal"
+            href="https://client.upforex.live/?tab=register" target="_blank" rel="noopener noreferrer">Open account
+            <span>↗</span></a>
+        </div>
+        <div class="steps-list">
+          <div class="step reveal"><span>01</span>
+            <div>
+              <h3>Explore.</h3>
+              <p>Get to know the markets, platform and trading risks.</p>
+            </div><b>↘</b>
+          </div>
+          <div class="step reveal"><span>02</span>
+            <div>
+              <h3>Register.</h3>
+              <p>Use the official client portal and complete the required checks.</p>
+            </div><b>↘</b>
+          </div>
+          <div class="step reveal"><span>03</span>
+            <div>
+              <h3>Get set.</h3>
+              <p>Review the terms, set up MT5 and choose how you want to start.</p>
+            </div><b>↗</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources section-pad" id="insights">
+      <div class="wrap">
+        <div class="kicker reveal"><span>07</span> / KEEP EXPLORING <span class="kicker-right">THE LEARNING SPACE</span>
+        </div>
+        <div class="resources-head">
+          <h2 class="editorial-heading reveal">CURIOSITY<br>LOOKS <em>GOOD</em><br>ON YOU.</h2>
+          <p class="reveal">Learning is part of the journey. Find more to explore.</p>
+        </div>
+        <div class="resource-grid"><a class="resource-link reveal" href="https://www.upforex.com/blogs"><span
+              class="resource-top">01 / IDEAS AND INSIGHTS <b>↗</b></span><span
+              class="resource-graphic graphic-insights"
+              aria-hidden="true"><span>↗</span><i></i><i></i></span><strong>Read the<br>latest insights.</strong><span
+              class="resource-bottom">VISIT BLOG <b>↗</b></span></a><a class="resource-link reveal"
+            href="https://www.upforex.com/resources/tools"><span class="resource-top">02 / TRADING TOOLS
+              <b>↗</b></span><span class="resource-graphic graphic-tools"
+              aria-hidden="true"><span>◎</span><i></i><i></i></span><strong>Explore your<br>toolkit.</strong><span
+              class="resource-bottom">VIEW TOOLS <b>↗</b></span></a><a class="resource-link reveal"
+            href="https://www.upforex.com/resources/faq"><span class="resource-top">03 / THE ANSWERS
+              <b>↗</b></span><span class="resource-graphic graphic-faq"
+              aria-hidden="true"><span>?</span><i></i><i></i></span><strong>Find your<br>answers.</strong><span
+              class="resource-bottom">VISIT FAQ <b>↗</b></span></a></div>
+      </div>
+    </section>
+
+    <section class="partnership section-pad" id="partnerships">
+      <div class="wrap partnership-body">
+        <div class="partnership-copy">
+          <div class="kicker kicker-dark reveal"><span>08</span> / GROW TOGETHER</div>
+          <h2 class="editorial-heading reveal">BETTER<br><em>TOGETHER.</em></h2>
+          <p class="reveal">Discover ways to connect and grow with UPFOREX through its partnership opportunities.</p>
+          <a class="pill-link pill-link-light reveal" href="https://www.upforex.com/partnerships">Explore partnerships
+            <span>↗</span></a>
+          <div class="partnership-footnote reveal"><span class="partnership-mini-dot"></span> PEOPLE · CONNECTIONS ·
+            POSSIBILITIES</div>
+        </div>
+        <div class="partner-scene reveal" data-visual-scene>
+          <div class="partner-photo-main">
+            <img src="assets/why-upforex.webp"
+              alt="Illustration of two business people shaking hands across a city skyline" loading="lazy" width="1280"
+              height="704">
+            <div class="partner-photo-vignette"></div>
+            <span class="partner-topline">CONNECTIONS THAT MATTER <b>✳</b></span>
+            <div class="partner-graphic-arrow" aria-hidden="true">↗</div>
+          </div>
+          <div class="partner-small-image" aria-hidden="true"><img src="assets/indices.webp" alt=""
+              loading="lazy"><span>ONE CONNECTED VIEW</span></div>
+          <div class="partner-image-bottom">EXPLORE PARTNERSHIP OPPORTUNITIES <b>↗</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section-pad" id="faq">
+      <div class="wrap faq-grid">
+        <div>
+          <div class="kicker reveal"><span>09</span> / THE DETAILS</div>
+          <h2 class="editorial-heading reveal">GOOD<br>QUESTIONS.<br><em>CLEAR</em><br>ANSWERS.</h2><a
+            class="line-link reveal" href="https://www.upforex.com/resources/faq">All frequently asked questions
+            <span>↗</span></a>
+        </div>
+        <div class="faq-items reveal">
+          <details>
+            <summary><span>01</span> What can I trade with UPFOREX? <b>+</b></summary>
+            <p>UPFOREX lists forex, stock, precious metal, index, energy and cryptocurrency CFDs. Availability can
+              differ by region.</p>
+          </details>
+          <details>
+            <summary><span>02</span> Which trading platform is available? <b>+</b></summary>
+            <p>MetaTrader 5 (MT5) is available with Windows, iOS and Android download links.</p>
+          </details>
+          <details>
+            <summary><span>03</span> How can I open an account? <b>+</b></summary>
+            <p>Use the official client portal, then follow its registration and verification steps. Review eligibility
+              before applying.</p>
+          </details>
+          <details>
+            <summary><span>04</span> Is forex and CFD trading risky? <b>+</b></summary>
+            <p>Yes. Forex and CFDs can involve leverage and substantial losses. Trading may not be suitable for
+              everyone. Read the risk disclosure.</p>
+          </details>
+          <details>
+            <summary><span>05</span> Where can I find trading support? <b>+</b></summary>
+            <p>Explore UPFOREX resources, the FAQs or the official contact page for support options.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="outro">
+      <div class="wrap">
+        <div class="outro-top reveal"><span>UPFOREX / THE NEXT CHAPTER</span><span>✳ WHERE TO NEXT?</span></div>
+        <h2 class="outro-title reveal">YOUR NEXT<br>MOVE <span>STARTS</span><br>HERE<span class="outro-dot">.</span>
+        </h2>
+        <div class="outro-bottom reveal">
+          <p>Explore the platform. Understand the risks.<br>Make a choice that's right for you.</p><a
+            class="outro-cta magnetic" href="https://client.upforex.live/?tab=register" target="_blank"
+            rel="noopener noreferrer"><span>GET STARTED</span><b>↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <a href="#top" id="backTop" class="back-to-top" aria-label="Back to top"><span>↑</span><small>TOP</small></a>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-brand"><a href="#top"><img src="assets/upforex-logo.webp" width="215" height="35" alt="UPFOREX"></a>
+          <p>A different perspective<br>on global markets.</p>
+          <div class="social"><a href="https://www.facebook.com/UpforexGlobal" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook">FB ↗</a><a href="https://www.instagram.com/upforexglobal/" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram">IG ↗</a><a
+              href="https://www.linkedin.com/company/upforex-ltd/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn">IN ↗</a></div>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h3>Explore</h3><a href="#markets">Markets</a><a href="#experience">Why UPFOREX</a><a
+              href="#platform">MetaTrader 5</a><a href="#accounts">Accounts</a><a
+              href="https://www.upforex.com/about-us">About us</a>
+          </div>
+          <div>
+            <h3>Resources</h3><a href="https://www.upforex.com/blogs">Blog</a><a
+              href="https://www.upforex.com/resources/tools">Tools</a><a
+              href="https://www.upforex.com/resources/faq">FAQs</a><a
+              href="https://www.upforex.com/partnerships">Partnerships</a><a
+              href="https://www.upforex.com/contact-us">Contact</a>
+          </div>
+          <div>
+            <h3>Legal</h3><a href="https://www.upforex.com/risk-disclosure">Risk disclosure</a><a
+              href="https://www.upforex.com/privacy-policy">Privacy policy</a><a
+              href="https://www.upforex.com/legal-documents">Legal documents</a><a
+              href="https://www.upforex.com/anti-monry-laundering">AML policy</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-risk">
+        <p><strong>Risk warning:</strong> CFDs, forex and other leveraged products carry a high level of risk and may
+          not be suitable for all investors. Losses may be substantial. This homepage is for general information, not
+          personal investment advice. Read the official <a href="https://www.upforex.com/risk-disclosure">risk
+            disclosure</a> and legal documents before trading.</p>
+        <p><strong>Availability:</strong> Services, instruments, account terms and eligibility depend on the relevant
+          legal entity and your location. UPFOREX's existing site lists restricted regions, including India and the
+          United States. Verify eligibility and current regulatory details on the official site before publishing or
+          registering.</p>
+      </div>
+      <div class="footer-end"><span>© <span id="year">2026</span> UPFOREX. ALL RIGHTS RESERVED.</span><span>A DIFFERENT
+          PERSPECTIVE <b>✳</b></span><a href="#top">BACK TO TOP ↑</a></div>
+    </div>
+  </footer>
+</body>
+
+</html>
