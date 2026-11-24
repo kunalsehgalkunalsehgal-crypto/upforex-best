@@ -58,8 +58,7 @@
     <section class="hero" id="top">
       <div class="wrap hero-layout">
         <div class="hero-text">
-          <p class="eyebrow intro-animate"><span class="eyebrow-sq"></span> WELCOME TO A NEW PERSPECTIVE <span
-              class="eyebrow-counter">[01 — 09]</span></p>
+          <p class="eyebrow intro-animate"><span class="eyebrow-sq"></span> WELCOME TO A NEW PERSPECTIVE </p>
           <h1 class="hero-heading intro-animate">THINK<br><span class="outline-word">BIGGER.</span><br><span
               class="green-underline">TRADE</span><span class="hero-asterisk" aria-hidden="true">✳</span><br>SMARTER.
           </h1>
@@ -136,11 +135,67 @@
       <div class="hero-vertical" aria-hidden="true">THE WORLD IS ALWAYS MOVING ↗</div>
     </section>
 
-    <div class="moving-band" aria-hidden="true">
+    <!-- <div class="moving-band" aria-hidden="true">
       <div class="band-track"><span>DIFFERENT PERSPECTIVE <i>✳</i> SAME WORLD <i>✳</i> BIGGER THINKING <i>✳</i> SIX
           MARKETS <i>✳</i> </span><span>DIFFERENT PERSPECTIVE <i>✳</i> SAME WORLD <i>✳</i> BIGGER THINKING <i>✳</i> SIX
           MARKETS <i>✳</i> </span></div>
-    </div>
+    </div> -->
+<!-- UPFOREX Market Ticker: replaces old green moving text strip -->
+<section class="upforex-live-ticker" aria-label="Live financial market quotes">
+  <div class="tradingview-widget-container">
+    <!-- <div class="tradingview-widget-container__widget"></div> -->
+<!-- UPFOREX Market Ticker: hero ke neeche, old moving-band ki jagah -->
+<section class="upforex-live-ticker" aria-label="Live financial market quotes">
+  <div class="tradingview-widget-container" id="upforexTickerHost">
+    <div class="tradingview-widget-container__widget"></div>
+  </div>
+</section>
+<script>
+  // Valid JavaScript loader: TradingView receives its JSON configuration
+  // as the text content of the external script element.
+  (() => {
+    const host = document.getElementById('upforexTickerHost');
+    if (!host) return;
+
+    const config = {
+      symbols: [
+    { description: "XAUUSD", proName: "OANDA:XAUUSD" },
+    { description: "EURUSD", proName: "OANDA:EURUSD" },
+    { description: "GBPUSD", proName: "OANDA:GBPUSD" },
+    { description: "USDCAD", proName: "OANDA:USDCAD" },
+    { description: "NZDUSD", proName: "OANDA:NZDUSD" },
+    { description: "AUDUSD", proName: "OANDA:AUDUSD" },
+    { description: "USDJPY", proName: "OANDA:USDJPY" },
+    { description: "USDCHF", proName: "OANDA:USDCHF" },
+    { description: "DXY", proName: "TVC:DXY" },
+    { description: "BTCUSDT", proName: "BINANCE:BTCUSDT" },
+    { description: "ETHUSDT", proName: "BINANCE:ETHUSDT" },
+    { description: "E-Mini S&P 500 Fut", proName: "CME_MINI:ES1!" },
+    { description: "TESLA", proName: "NASDAQ:TSLA" },
+    { description: "AMAZON", proName: "NASDAQ:AMZN" },
+    { description: "NVIDIA", proName: "NASDAQ:NVDA" }
+      ],
+      showSymbolLogo: true,
+      isTransparent: false,
+      displayMode: 'adaptive',
+      colorTheme: 'dark',
+      locale: 'en'
+    };
+
+    const widgetScript = document.createElement('script');
+    widgetScript.type = 'text/javascript';
+    widgetScript.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+    widgetScript.async = true;
+    widgetScript.textContent = JSON.stringify(config);
+    host.appendChild(widgetScript);
+  })();
+</script>
+<!-- /UPFOREX Market Ticker -->
+
+  </div>
+</section>
+<!-- /UPFOREX Market Ticker -->
+    
 
     <section class="intro section-pad" id="experience">
       <div class="wrap">

@@ -1049,7 +1049,7 @@ summary:focus-visible {
 
 .market-option.active:before,
 .market-option:hover:before {
-  transform: scaleX(1)
+  transform: scaleX(0)
 }
 
 .market-option.active,
@@ -7687,5 +7687,284 @@ h2.editorial-heading em,
 
   #orbitalStage .uf-satellite-track--cfd > .satellite {
     transform: translate(-50%, -50%) rotate(-90deg);
+  }
+}
+/* ================================================================
+   UPFOREX / LIVE MARKET TICKER — ONLY NEW STYLES
+   Append these rules at the very bottom of css/style.css.
+   Existing logo, hero, globe, sections and animations stay the same.
+   TradingView controls price text inside its iframe; the page CSS
+   can style the ticker frame, not override internal widget colors.
+   ================================================================ */
+
+.upforex-live-ticker {
+  position: relative;
+  isolation: isolate;
+  box-sizing: border-box;
+  width: 100%;
+  /* min-height: 70px; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #0d0d0d;
+  border-top: 2px solid #3cff19;
+  border-bottom: 2px solid #3cff19;
+}
+
+.upforex-live-ticker .tradingview-widget-container {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 68px;
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+}
+
+.upforex-live-ticker .tradingview-widget-container__widget {
+  display: block;
+  width: 100%;
+  min-height: 68px;
+}
+
+.upforex-live-ticker iframe {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
+@media (max-width: 740px) {
+  .upforex-live-ticker {
+    min-height: 70px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+  }
+}
+
+/* UPFOREX - Responsive TradingView Ticker */
+
+.upforex-live-ticker {
+  --ticker-height: 56px;
+
+  width: 100%;
+  height: var(--ticker-height) !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.upforex-live-ticker .tradingview-widget-container,
+.upforex-live-ticker .tradingview-widget-container__widget {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.upforex-live-ticker iframe {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .upforex-live-ticker {
+    --ticker-height: 54px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .upforex-live-ticker {
+    --ticker-height: 50px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 375px) {
+  .upforex-live-ticker {
+    --ticker-height: 48px;
+  }
+}
+/* =============================================================
+   UPFOREX / CHOOSE YOUR WORLD — MOBILE FAQ-STYLE ACCORDION
+   Append ONCE to the END of css/style.css.
+   Desktop unchanged. Uses existing six market images and data.
+   ============================================================= */
+/* Desktop/tablet: new inline panels are hidden. Original spotlight remains. */
+.markets .upf-market-accordion-panel { display: none; }
+
+@media (max-width: 740px) {
+  .markets.upf-market-accordion .markets-interface {
+    display: block;
+    min-height: 0;
+  }
+  .markets.upf-market-accordion .market-options {
+    border-right: 0;
+    width: 100%;
+  }
+  /* The original right-side spotlight moves INSIDE the selected row on phones. */
+  .markets.upf-market-accordion > .wrap .market-showcase {
+    display: none !important;
+  }
+  .markets.upf-market-accordion .market-option {
+    width: 100%;
+    min-height: 80px;
+    grid-template-columns: 24px 50px minmax(0, 1fr) 26px;
+    gap: 11px;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255,255,255,.19);
+    color: #f7fff4;
+    background: transparent;
+  }
+  .markets.upf-market-accordion .market-option::before {
+    transform: scaleX(0);
+  }
+  /* Only an OPEN row gets the existing brand-green highlight. */
+  .markets.upf-market-accordion .market-option.is-expanded,
+  .markets.upf-market-accordion .market-option.is-expanded:hover {
+    color: #0d0d0d;
+    background: #3cff19;
+  }
+  /* .markets.upf-market-accordion .market-option.is-expanded::before { transform: scaleX(1); } */
+  .markets.upf-market-accordion .market-option:not(.is-expanded):hover {
+    color: #f7fff4;
+    background: transparent;
+  }
+  .markets.upf-market-accordion .market-option:not(.is-expanded):hover::before {
+    transform: scaleX(0);
+  }
+  .markets.upf-market-accordion .market-option:not(.is-expanded) .market-num {
+    color: #a9b9a6;
+  }
+  .markets.upf-market-accordion .market-option.is-expanded .market-num { color: #193511; }
+  .markets.upf-market-accordion .market-option:not(.is-expanded) .market-thumb {
+    border-color: rgba(60,255,25,.35);
+    transform: none;
+  }
+  .markets.upf-market-accordion .market-option.is-expanded .market-thumb {
+    border-color: #0d0d0d;
+    transform: scale(1.04);
+  }
+  .markets.upf-market-accordion .market-option:not(.is-expanded) .market-name { color: #fff; }
+  .markets.upf-market-accordion .market-option.is-expanded .market-name { color: #0d0d0d; }
+  .markets.upf-market-accordion .market-option .market-chevron {
+    font-size: 0; /* replaces original diagonal arrow with FAQ +/- */
+    text-align: center;
+  }
+  .markets.upf-market-accordion .market-option .market-chevron::after {
+    content: '+';
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1;
+    color: currentColor;
+    display: inline-block;
+    transition: transform .3s ease;
+  }
+  .markets.upf-market-accordion .market-option.is-expanded .market-chevron::after {
+    content: '−';
+  }
+  /* The panel is inserted directly below each existing market button. */
+  .markets.upf-market-accordion .upf-market-accordion-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+    background: #111b14;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 0;
+    transition: grid-template-rows .44s cubic-bezier(.22,1,.36,1),
+                opacity .32s ease, visibility .44s,
+                border-color .3s ease;
+  }
+  .markets.upf-market-accordion .upf-market-accordion-panel.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    border-left-color: rgba(60,255,25,.33);
+    border-right-color: rgba(60,255,25,.33);
+    border-bottom: 1px solid rgba(60,255,25,.44);
+  }
+  .markets .upf-market-accordion-panel__inner {
+    min-height: 0;
+    min-width: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 103px minmax(0,1fr);
+    align-items: start;
+    gap: 15px;
+    padding: 0 14px;
+    transition: padding .44s cubic-bezier(.22,1,.36,1);
+  }
+  .markets .upf-market-accordion-panel.is-open .upf-market-accordion-panel__inner {
+    padding: 18px 14px 22px;
+  }
+  .markets .upf-market-accordion-panel__image {
+    width: 103px;
+    height: 103px;
+    border-radius: 50%;
+    border: 3px solid #3cff19;
+    object-fit: cover;
+    box-shadow: 0 7px 30px rgba(0,0,0,.35);
+  }
+  .markets .upf-market-accordion-panel__copy { min-width: 0; }
+  .markets .upf-market-accordion-panel__tag {
+    display: block;
+    color: #8fd77e;
+    font-weight: 800;
+    letter-spacing: .09em;
+    font-size: 9px;
+    margin: 2px 0 7px;
+  }
+  .markets .upf-market-accordion-panel__title {
+    color: white;
+    font-size: clamp(18px,5.5vw,23px);
+    letter-spacing: -.04em;
+    line-height: 1.12;
+    margin: 0 0 9px;
+  }
+  .markets .upf-market-accordion-panel__desc {
+    color: #c8d7c6;
+    font-size: 12px;
+    line-height: 1.55;
+    margin: 0 0 12px;
+  }
+  .markets .upf-market-accordion-panel__link {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    color: #3cff19;
+    font-size: 11px;
+    font-weight: 800;
+    border-bottom: 1px solid #3cff19;
+    padding-bottom: 5px;
+    text-decoration: none;
+  }
+  .markets .upf-market-accordion-panel__link:focus-visible,
+  .markets .market-option:focus-visible {
+    outline: 2px solid #3cff19;
+    outline-offset: -2px;
+  }
+}
+@media (max-width: 375px) {
+  .markets .upf-market-accordion-panel__inner {
+    grid-template-columns: 84px minmax(0,1fr);
+    gap: 11px;
+  }
+  .markets .upf-market-accordion-panel__image { width: 84px; height: 84px; }
+  .markets .upf-market-accordion-panel__desc { font-size: 11px; }
+  .markets .upf-market-accordion-panel__tag { font-size: 8px; }
+}
+@media (max-width: 740px) and (prefers-reduced-motion: reduce) {
+  .markets .upf-market-accordion-panel,
+  .markets .upf-market-accordion-panel__inner,
+  .markets .market-option .market-chevron::after {
+    transition: none !important;
   }
 }

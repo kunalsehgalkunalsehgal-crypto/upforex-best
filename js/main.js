@@ -730,3 +730,128 @@
   );
 })();
 
+/* ============================================================
+   UPFOREX / CHOOSE YOUR WORLD — MOBILE FAQ-STYLE ACCORDION
+   Append ONCE to END of js/main.js (after rounded image add-on).
+   Adds inline content on mobile without changing existing HTML.
+   ============================================================ */
+(() => {
+  'use strict';
+  function initMobileMarkets() {
+    const section = document.querySelector('#markets');
+    const options = section?.querySelector('.market-options');
+    const showcase = section?.querySelector('#marketShowcase');
+    const buttons = options ? [...options.querySelectorAll('.market-option')] : [];
+    if (!section || !options || !showcase || buttons.length !== 6) return;
+    if (section.classList.contains('upf-market-accordion')) return;
+
+    const mq = window.matchMedia('(max-width: 740px)');
+    const imageNames = ['forex', 'stocks', 'metals', 'indices', 'energy', 'crypto'];
+    const panels = [];
+    let openIndex = -1; // Mobile starts closed, just like the FAQs.
+
+    buttons.forEach((button, index) => {
+      const id = 'upf-mobile-market-' + index;
+      const panel = document.createElement('div');
+      const buttonId = 'upf-mobile-market-button-' + index;
+      button.id = button.id || buttonId;
+      panel.id = id;
+      panel.className = 'upf-market-accordion-panel';
+      panel.setAttribute('role', 'region');
+      panel.setAttribute('aria-labelledby', button.id);
+      panel.setAttribute('aria-hidden', 'true');
+      panel.inert = true;
+      const thumb = button.querySelector('.market-thumb img');
+      const imageSrc = thumb?.getAttribute('src') || `assets/market-${imageNames[index]}.png`;
+      panel.innerHTML = `
+        <div class="upf-market-accordion-panel__inner">
+          <img class="upf-market-accordion-panel__image" src="${imageSrc}"
+               alt="${imageNames[index]} market illustration" width="103" height="103" loading="lazy">
+          <div class="upf-market-accordion-panel__copy">
+            <span class="upf-market-accordion-panel__tag"></span>
+            <h3 class="upf-market-accordion-panel__title"></h3>
+            <p class="upf-market-accordion-panel__desc"></p>
+            <a class="upf-market-accordion-panel__link" target="_blank" rel="noopener noreferrer">
+              Explore this market <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>`;
+      button.setAttribute('aria-controls', id);
+      button.setAttribute('aria-expanded', 'false');
+      button.after(panel);
+      panels.push(panel);
+
+      // Existing click listener runs first and updates the source spotlight.
+      button.addEventListener('click', () => {
+        if (!mq.matches) return;
+        toggle(index);
+      });
+      // Preserve original arrow-key navigation and open the newly focused item.
+      button.addEventListener('keydown', event => {
+        if (!mq.matches || !['ArrowDown', 'ArrowUp'].includes(event.key)) return;
+        const focused = buttons.indexOf(document.activeElement);
+        if (focused !== -1) {
+          fillPanel(focused);
+          show(focused);
+        }
+      });
+    });
+
+    function fillPanel(index) {
+      const panel = panels[index];
+      panel.querySelector('.upf-market-accordion-panel__tag').textContent =
+        showcase.querySelector('#showcaseTag')?.textContent || '';
+      panel.querySelector('.upf-market-accordion-panel__title').textContent =
+        showcase.querySelector('#showcaseTitle')?.textContent || '';
+      panel.querySelector('.upf-market-accordion-panel__desc').textContent =
+        showcase.querySelector('#showcaseDescription')?.textContent || '';
+      panel.querySelector('.upf-market-accordion-panel__link').href =
+        showcase.querySelector('#showcaseLink')?.href || '#markets';
+    }
+    function show(index) {
+      openIndex = index;
+      buttons.forEach((button, i) => {
+        const expanded = index === i;
+        button.classList.toggle('is-expanded', expanded);
+        button.classList.toggle('active', expanded);
+        button.setAttribute('aria-expanded', String(expanded));
+        button.setAttribute('aria-pressed', String(expanded));
+        panels[i].classList.toggle('is-open', expanded);
+        panels[i].setAttribute('aria-hidden', String(!expanded));
+        panels[i].inert = !expanded;
+      });
+    }
+    function toggle(index) {
+      const shouldOpen = openIndex !== index;
+      if (shouldOpen) fillPanel(index);
+      show(shouldOpen ? index : -1);
+    }
+    function syncViewport() {
+      if (mq.matches) {
+        show(-1); // FAQ style: no market expanded until tapped.
+      } else {
+        openIndex = -1;
+        const selected = Number(showcase.dataset.market || 0);
+        buttons.forEach((button, i) => {
+          button.classList.toggle('active', i === selected);
+          button.classList.remove('is-expanded');
+          button.setAttribute('aria-pressed', String(i === selected));
+          button.setAttribute('aria-expanded', 'false');
+          panels[i].classList.remove('is-open');
+          panels[i].inert = true;
+          panels[i].setAttribute('aria-hidden', 'true');
+        });
+      }
+    }
+
+    section.classList.add('upf-market-accordion');
+    syncViewport();
+    if (mq.addEventListener) mq.addEventListener('change', syncViewport);
+    else mq.addListener(syncViewport); // older browsers
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMarkets, { once: true });
+  } else {
+    initMobileMarkets();
+  }
+})();
